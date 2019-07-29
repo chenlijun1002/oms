@@ -1,0 +1,193 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../../utils/utils.less';
+
+.listContent {
+  .description {
+    line-height: 22px;
+    max-width: 720px;
+  }
+  .extra {
+    color: @text-color-secondary;
+    margin-top: 16px;
+    line-height: 22px;
+    & > :global(.ant-avatar) {
+      vertical-align: top;
+      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 1px;
+    }
+    & > em {
+      color: @disabled-color;
+      font-style: normal;
+      margin-left: 16px;
+    }
+  }
+}
+a.listItemMetaTitle {
+  color: @heading-color;
+}
+.listItemExtra {
+  width: 272px;
+  height: 1px;
+}
+.selfTrigger {
+  margin-left: 12px;
+}
+
+@media screen and (max-width: @screen-xs) {
+  .selfTrigger {
+    display: block;
+    margin-left: 0;
+  }
+  .listContent {
+    .extra {
+      & > em {
+        display: block;
+        margin-left: 0;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+@media screen and (max-width: @screen-md) {
+  .selfTrigger {
+    display: block;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: @screen-lg) {
+  .listItemExtra {
+    width: 0;
+    height: 1px;
+  }
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.wxImgBox{
+   display:table;
+  .imgBox{    
+    display:table-cell;
+    img{
+      width:80px;
+      height:80px;
+      vertical-align:top;
+    }
+  }
+  .textBox{    
+    display:table-cell;
+     padding-left: 8px; 
+     vertical-align:middle;  
+    div{
+      overflow: hidden;
+      position: relative;
+      line-height: 1.5em;
+      max-height: 2 * 1.5em;
+      text-align: justify;
+      margin-right: -1em;
+      padding-right: 1em;
+      &:before {
+        background: #fff;
+        content: '...';
+        width:16px;
+        padding: 0 1px;
+        position: absolute;
+        right: -2px;
+        bottom: 0;
+      }
+      &:after {
+        background: white;
+        content: '';
+        margin-top: 0.2em;
+        position: absolute;
+        right: -2px;
+        width: 1em;
+        height: 1em;
+      }
+    }    
+  }
+} 
+
+:global(.ant-table-row) {
+  &:hover{
+    td{background:#fff !important;}
+    .textBox{  
+      div{
+        &:before {          
+          content: '...';
+          width:16px;
+          padding: 0 1px;       
+          position: absolute;
+          right: -2px;
+          bottom: 0;
+        }
+        &:after {       
+        content: '';
+        margin-top: 0.2em;
+        position: absolute;
+        right: -2px;
+        width: 1em;
+        height: 1em;
+      }
+      }
+    }
+  }
+}
+.wxaManage{
+  :global{
+    .ant-tabs-nav{
+      height:53px;
+    }
+  }
+}
+
+.tableList {
+  .tableListOperator {
+    margin-bottom: 16px;
+    button {
+      margin-right: 8px;
+    }
+  }
+}
+
+.tableListForm {
+  :global {
+    .ant-form-item {
+      margin-bottom: 24px;
+      margin-right: 0;
+      display: flex;
+      > .ant-form-item-label {
+        width: auto;
+        line-height: 32px;
+        padding-right: 8px;
+      }
+      .ant-form-item-control {
+        line-height: 32px;
+      }
+    }
+    .ant-form-item-control-wrapper {
+      flex: 1;
+    }
+  }
+  .submitButtons {
+    white-space: nowrap;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-lg) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}
+.unActive{
+  color:#8c8c8c;
+}

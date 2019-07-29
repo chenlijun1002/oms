@@ -1,0 +1,86 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../../utils/utils.less';
+.description {
+  max-width: 400px;
+  .textOverflow();
+}
+.version-content {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background: #fff;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .xcx-type {
+    display: inline-block;
+    border-radius:4px;
+    width: 94px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+    &:first-of-type {
+      margin-right: 16px;
+    }
+  }
+  .xcx-type-active {
+    background: #40a9ff;
+    border-radius:4px;
+    color: #fff;
+  }
+}
+.headerInfo {
+  position: relative;
+  text-align: center;
+  & > span {
+    color: @text-color-secondary;
+    display: inline-block;
+    font-size: @font-size-base;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  & > p {
+    color: @heading-color;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  & > em {
+    background-color: @border-color-split;
+    position: absolute;
+    height: 56px;
+    width: 1px;
+    top: 0;
+    right: 0;
+  }
+}
+.versionDetails{
+  background-color:#fff;
+  padding:24px 32px;
+  margin-top: 24px;
+  min-height: 500px;
+  & > div{
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 1em;
+  }
+  & > div p{
+    text-align: right;
+    margin-bottom: 0;
+  }
+}
+.versionManage{
+  :global{
+    .ant-tabs-nav{
+      height:53px;
+      font-size:16px;
+    }
+  }
+}
+.unActive{
+  color:#8c8c8c;
+}
